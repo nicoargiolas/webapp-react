@@ -40,7 +40,7 @@ const ReviewForm = ({ movie_id, realoadReviews }) => {
                 <input type="text" name="name" value={formData.name} onChange={setFieldValue} />
 
                 <h3> Recensione </h3>
-                <textarea className="form-control" name="text" value={formData.text} onChange={setFieldValue} ></textarea>
+                <textarea name="text" value={formData.text} onChange={setFieldValue} ></textarea>
 
                 <h3> Voto </h3>
                 <input type="number" min="1" max="5" name='vote' value={formData.vote} onChange={setFieldValue} />

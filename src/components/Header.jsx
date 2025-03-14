@@ -4,7 +4,8 @@ const Header = () => {
     return (
         <nav className="navbar">
             <div>
-                <Link to="/">MOVIES</Link>
+                <Link to="/">MOVIES</Link> <br />
+                <Link to="/movies/add">Aggiungi film</Link>
             </div>
         </nav>
     )

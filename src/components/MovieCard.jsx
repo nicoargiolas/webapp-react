@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const MovieCard = ({ movieProp }) => {
 
-    const { id, title, director, genre, relase_year, abstract, image } = movieProp;
+    const { id, title, director, genre, release_year, abstract, image } = movieProp;
 
     return (
         <div>
@@ -11,7 +11,7 @@ const MovieCard = ({ movieProp }) => {
             <div className="card-body">
                 <h4 className="movie-title"> {title} </h4>
                 <h6 className="movie-director"> {director} </h6>
-                <span className="movie-details"> {genre} ({relase_year})</span> <br />
+                <span className="movie-details"> {genre} ({release_year})</span> <br />
                 <p className="card-text">
                     {abstract}
                 </p>
