@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
 
 import ReviewCard from '../components/ReviewCard'
+import ReviewForm from '../components/ReviewForm'
 
 const MoviePage = () => {
 
@@ -50,6 +51,10 @@ const MoviePage = () => {
                     <h4>Recensioni</h4>
                 </header>
                 {renderReviews()}
+            </section>
+
+            <section>
+                <ReviewForm movie_id={movie.id} realoadReviews={fetchMovie} />
             </section>
 
             <footer>
