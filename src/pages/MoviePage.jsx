@@ -2,6 +2,8 @@ import axios from 'axios'
 import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
 
+import ReviewCard from '../components/ReviewCard'
+
 const MoviePage = () => {
 
     const { id } = useParams();
@@ -22,6 +24,12 @@ const MoviePage = () => {
             })
     }
 
+    const renderReviews = () => {
+        return movie.reviews?.map(
+            review => <ReviewCard key={review.id} reviewProp={review} />
+        )
+    }
+
     useEffect(fetchMovie, [])
 
     return (
@@ -36,6 +44,13 @@ const MoviePage = () => {
                     </div>
                 </div>
             </header>
+
+            <section id="reviews">
+                <header>
+                    <h4>Recensioni</h4>
+                </header>
+                {renderReviews()}
+            </section>
 
             <footer>
                 <Link className="btn" to="/">Torna alla Home</Link>
